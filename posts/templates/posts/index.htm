@@ -1,0 +1,14 @@
+{% extends 'posts/layout.htm' %}
+
+{% block content %}
+
+<h3 class="text-center bg-warning" >{{title}}</h3>
+<ul>
+    {% for post in posts %}
+    <li class="list-unstyled py-2 text-center border my-1 text-uppercase">
+        <a href="/details/{{ post.id }}"> {{post.title}}</a>
+        
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}
